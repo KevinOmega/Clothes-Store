@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:ital,wght@1,300&family=Yanone+Kaffeesatz:wght@300&display=swap');//font-families
+
+//font-families
+
+$potta : 'Potta One', cursive;
+$yanone : 'Yanone Kaffeesatz', sans-serif;
+$roboto : 'Roboto',sans-serif;
+
+//colors 
+
+$primary : #82FF00;
+$secondary : #7D00FF;
+$white : #fff;
+$black : #000;
+$gray : #656565 ;
+$smooth-gray : #E5E5E5;
+
+//set-up
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: $yanone;
+    font-size: 10px;
+}
+
+h1,h2,h3,h4,p,a{
+    margin: 0;
+    padding: 0;
+}
+
+h1{font-size: 50px;}
+h2{font-size : 40px;}
+h3{font-size: 30px;}
+h4{font-size: 20px;}
+
+p,a,button{
+    font-size: 10px;
+}
+
+button{
+    font-family: $roboto;
+}
+
+@import "./navbar";
