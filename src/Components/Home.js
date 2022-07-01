@@ -5,12 +5,31 @@ import Card from "./Card";
 const Home = () => {
   const [currentType, setCurrentType] = useState("shirt");
 
+  const handleOption = (type) => {
+    setCurrentType(type);
+  };
+
   return (
     <section id="home">
       <div className="home-options">
-        <div className="option">T-shirts</div>
-        <div className="option">Pants</div>
-        <div className="option">Shoes</div>
+        <div
+          className={`option ${currentType === "shirt" && "active-option"}`}
+          onClick={() => handleOption("shirt")}
+        >
+          T-shirts
+        </div>
+        <div
+          className={`option ${currentType === "pant" && "active-option"}`}
+          onClick={() => handleOption("pant")}
+        >
+          Pants
+        </div>
+        <div
+          className={`option ${currentType === "shoes" && "active-option"}`}
+          onClick={() => handleOption("shoes")}
+        >
+          Shoes
+        </div>
       </div>
 
       <div className="home-center">

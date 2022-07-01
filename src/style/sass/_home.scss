@@ -1,0 +1,109 @@
+#home{
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+    padding: 5rem 0;
+}
+
+.home-options{
+    display: flex;
+    font-size: 1.3rem;
+    .option{
+        background-color: $white;
+        padding: 0.9rem 0.7rem;
+        border: 1px dotted $black;
+        cursor: pointer;
+    }
+    .active-option{
+        background-color: $secondary;
+        color: $white;
+    }
+}
+
+.home-center{
+    width: 100%;
+    display: grid;
+    row-gap: 3rem;
+    
+    .card-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .card {
+                width: 13rem;
+                background-color: $white;
+        
+                &-header {
+                    background-color: $secondary;
+                    padding: 1rem 0;
+                    text-align: center;
+                    color: $white;
+                }
+        
+                &-hero {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 15rem;
+        
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+        
+                &-center {
+                    background-color: $secondary ;
+                    padding: 1rem 0;
+                    display: flex;
+                    justify-content: space-around;
+        
+                    &-price {
+                        color: $white;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                    }
+        
+                    &-btn {
+                        button {
+                            background-color: $white;
+                            border: none;
+                            padding: 0.3rem 0.5rem;
+                            border-radius: 30px;
+                            color: $secondary;
+                            font-weight: bolder;
+                            font-size: 0.8rem;
+                            cursor: pointer;
+        
+                            &:hover {
+                                box-shadow: 0 0 20px $black;
+                            }
+        
+                            &:active {
+                                transform: scale(0.95);
+                                box-shadow: 0 0 7px $black 0 0 10px $black;
+                            }
+                        }
+                    }
+                }
+    }
+
+       
+    }
+    
+}
+
+@media  screen and (min-width : 600px) {
+    .home-center{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen  and (min-width : 1000px){
+    .home-center{
+        grid-template-columns: repeat(3,1fr);
+    }
+}

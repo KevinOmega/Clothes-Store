@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 10px;
+  height: 100%;
+  overflow-X: hidden;
 }
 
 h1, h2, h3, h4, p, a {
@@ -56,5 +58,317 @@ button {
 .navbar-cart span {
   font-size: 2rem;
   cursor: pointer;
+}
+
+.navbar-cart span:active {
+  font-size: 1.8rem;
+}
+
+#home {
+  background-color: #82FF00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+  padding: 5rem 0;
+}
+
+.home-options {
+  display: flex;
+  font-size: 1.3rem;
+}
+
+.home-options .option {
+  background-color: #fff;
+  padding: 0.9rem 0.7rem;
+  border: 1px dotted #000;
+  cursor: pointer;
+}
+
+.home-options .active-option {
+  background-color: #7D00FF;
+  color: #fff;
+}
+
+.home-center {
+  width: 100%;
+  display: grid;
+  row-gap: 3rem;
+}
+
+.home-center .card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.home-center .card-container .card {
+  width: 13rem;
+  background-color: #fff;
+}
+
+.home-center .card-container .card-header {
+  background-color: #7D00FF;
+  padding: 1rem 0;
+  text-align: center;
+  color: #fff;
+}
+
+.home-center .card-container .card-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+}
+
+.home-center .card-container .card-hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.home-center .card-container .card-center {
+  background-color: #7D00FF;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-center .card-container .card-center-price {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.home-center .card-container .card-center-btn button {
+  background-color: #fff;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 30px;
+  color: #7D00FF;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.home-center .card-container .card-center-btn button:hover {
+  box-shadow: 0 0 20px #000;
+}
+
+.home-center .card-container .card-center-btn button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 7px #000 0 0 10px #000;
+}
+
+@media screen and (min-width: 600px) {
+  .home-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .home-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#footer {
+  background: #656565;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.footer-rights p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.footer-icons {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 0.7rem;
+  padding: 0;
+}
+
+.footer-icons span {
+  cursor: pointer;
+}
+
+.footer-icons span:active {
+  transform: scale(0.93);
+}
+
+@media screen and (min-width: 600px) {
+  .footer-rights p {
+    font-size: 1.5rem;
+  }
+  .footer-icons {
+    font-size: 2rem;
+  }
+}
+
+.cart-wrapper {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  overflow-y: auto;
+  left: 100%;
+  transition: 500ms ease-in;
+}
+
+#cart {
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-active {
+  transform: translateX(-100%);
+}
+
+.x-btn {
+  font-size: 2rem;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.x-btn:active {
+  transform: scale(0.9);
+}
+
+.cart-header {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.voidCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.voidCart h4 {
+  font-size: 2rem;
+}
+
+.voidCart span {
+  font-size: 7rem;
+}
+
+.cart-center {
+  width: 100%;
+}
+
+.cart-center-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-center-cards .card-product {
+  background: #E5E5E5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 10px;
+}
+
+.cart-center-cards .card-product-hero img {
+  width: 4rem;
+}
+
+.cart-center-cards .card-product p {
+  font-size: 1.2rem;
+}
+
+.cart-center-cards .card-product .price {
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.cart-center-cards .card-product button {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #7D00FF;
+  cursor: pointer;
+}
+
+.cart-center-cards .card-product .amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.cart-center-cards .card-product .amount .btn {
+  color: #7D00FF;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-center-cards .card-product .amount .btn:active {
+  transform: scale(0.8);
+}
+
+.cart-center-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+
+.cart-center-info .total-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cart-center-info .btn button {
+  background-color: #7D00FF;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.cart-center-info .btn button:hover {
+  box-shadow: 0 0 10px #000;
+}
+
+.cart-center-info .btn button:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #000 0 0 10px #000;
+}
+
+@media screen and (min-width: 600px) {
+  .cart-center .card-product {
+    width: 90%;
+    justify-content: space-around;
+  }
 }
 /*# sourceMappingURL=main.css.map */

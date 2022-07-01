@@ -1,0 +1,157 @@
+
+.cart-wrapper{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    overflow-y: auto;
+    left: 100%;
+    transition: 500ms ease-in;
+}
+
+#cart{
+    min-height: 100vh;
+    width: 100%;
+    background: $white;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cart-active{
+    transform: translateX(-100%);
+}
+
+.x-btn{
+    font-size: 2rem;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    cursor: pointer;
+    &:active{
+        transform: scale(0.9);
+    }
+}
+
+.cart-header{
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.voidCart{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    gap: 2rem; 
+    margin-top: 5rem;
+
+    h4{
+        font-size: 2rem;
+    }
+    span{
+        font-size: 7rem;
+    }
+}
+
+.cart-center{
+    width: 100%;
+    &-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        .card-product{
+            background: $smooth-gray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 0;
+            border-radius: 10px;
+            &-hero{
+                img{
+                    width: 4rem;
+                }
+            }
+            p{
+                font-size: 1.2rem;
+            }
+            .price{
+                font-weight: bold;
+                font-family: $roboto;
+                font-size: 1rem;
+            }
+            button{
+                background: transparent;
+                border: none;
+                font-size: 1rem;
+                font-weight: bolder;
+                color: $secondary;
+                cursor: pointer;
+            }
+            .amount{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 1rem;
+                font-family: $roboto;
+                .btn{
+                    color: $secondary;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    &:active{
+                        transform: scale(0.8);
+                    }
+                }
+            }
+        }
+    }
+    &-info{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2.5rem 0;
+
+        .total-price{
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .btn{
+            button{
+                background-color: $secondary;
+                color: $white;
+                border: none;
+                font-size: 1rem;
+                font-weight: bold;
+                padding: 0.6rem 1.2rem;
+                border-radius: 30px;
+                cursor: pointer;
+                &:hover{
+                    box-shadow: 0 0 10px $black;
+                }
+                &:active{
+                    transform: scale(0.9);
+                    box-shadow: 0 0 5px $black
+                                0 0 10px $black;
+                }
+            }
+        }
+    }
+}
+
+@media screen  and (min-width : 600px){
+    .cart-center{
+        .card-product {
+                width: 90%;
+                justify-content: space-around;
+            }
+    }
+    
+}

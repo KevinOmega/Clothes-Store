@@ -1,7 +1,15 @@
 import React from "react";
 import { BsCartFill } from "react-icons/bs";
+import { useGlobalContext } from "../context";
 
 const Navbar = () => {
+  const { setShowCart } = useGlobalContext();
+
+  const handleCart = () => {
+    setShowCart(true);
+    document.body.style.overflowY = "hidden";
+  };
+
   return (
     <section id="navbar">
       <div className="navbar-logo">
@@ -9,7 +17,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-cart">
         <span>
-          <BsCartFill />
+          <BsCartFill onClick={handleCart} />
         </span>
       </div>
     </section>

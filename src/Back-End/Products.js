@@ -11,7 +11,7 @@ export const products = [
     id: 102,
     name: "Laurent shirt",
     image:
-      "https://saint-laurent.dam.kering.com/m/29f3055c6a21b25a/eCom-554298Y2ZJ21000_A.jpg",
+      "https://i.pinimg.com/originals/62/98/b0/6298b026a65cf80bcf9dce061e9b79c9.png",
     price: 24.99,
     type: "shirt",
   },

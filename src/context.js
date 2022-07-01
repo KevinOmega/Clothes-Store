@@ -4,8 +4,9 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [showCart, setShowCart] = useState(false);
   return (
-    <AppContext.Provider value={{ cart, setCart }}>
+    <AppContext.Provider value={{ cart, setCart, showCart, setShowCart }}>
       {children}
     </AppContext.Provider>
   );

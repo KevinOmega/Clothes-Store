@@ -1,0 +1,39 @@
+#footer{
+    background: $gray;
+    color : $white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.footer-rights{
+    p{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+.footer-icons{
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.7rem;
+    padding: 0;
+    span{
+        cursor: pointer;
+        &:active{
+            transform: scale(0.93);
+        }
+    }
+}
+
+@media screen and (min-width : 600px) {
+    .footer-rights{
+        p{
+            font-size: 1.5rem;
+        }
+    }
+
+    .footer-icons{
+        font-size: 2rem;
+    }
+}

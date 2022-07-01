@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:ital,wght@1,300&family=Yanone+Kaffeesatz:wght@300&display=swap');//font-families
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:ital,wght@1,300&family=Yanone+Kaffeesatz:wght@300&display=swap');
 
 //font-families
 
@@ -22,7 +22,10 @@ body{
     margin: 0;
     font-family: $yanone;
     font-size: 10px;
+    height: 100%;
+    overflow-X: hidden;
 }
+
 
 h1,h2,h3,h4,p,a{
     margin: 0;
@@ -43,3 +46,6 @@ button{
 }
 
 @import "./navbar";
+@import "./home";
+@import "./footer";
+@import "./cart";
